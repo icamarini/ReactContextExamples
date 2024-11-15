@@ -1,5 +1,13 @@
 import "@/styles/globals.css";
 
-export default function App({ Component, pageProps }) {
-  return <Component {...pageProps} />;
+import { ProveedorGlobal } from './context/contexto'; // Importar el proveedor
+
+function MyApp({ Component, pageProps }) {
+    return (
+        <ProveedorGlobal>
+            <Component {...pageProps} />
+        </ProveedorGlobal>
+    );
 }
+
+export default MyApp;
