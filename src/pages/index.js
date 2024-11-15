@@ -1,22 +1,27 @@
-import { useContext } from 'react';
-import { memoriaGlobal } from './context/contexto';
-import BotonIncrementar from './components/BotonIncrementar';
+import Contador1 from './components/Contador1';
+import Contador2 from './components/Contador2';
+import Contador3 from './components/Contador3';
+import Contador4 from './components/Contador4';
+import Contador5 from './components/Contador5';
+import Contador6 from './components/Contador6';
+
 
 function HomePage() {
-    const { estadoA, setEstadoA, estadoB, setEstadoB } = useContext(memoriaGlobal);
-
     return (
         <div>
-            <h1>Página Principal</h1>
-            <p>Estado A: {estadoA}</p>
-            <p>Estado B: {estadoB}</p>
-            <button onClick={() => setEstadoA(estadoA + 1)}>Incrementar Estado A</button>
-            <button onClick={() => setEstadoA(estadoA - 1)}>Decrementar Estado A</button>
-            <button onClick={() => setEstadoB("¡Nuevo valor para Estado B!")}> Cambiar Estado B </button>
-
-            <BotonIncrementar />
+            <h1>Contadores por Contextos</h1>
+            <div>
+                <Contador1 />                
+                <Contador2 />
+                <Contador3 />
+                <Contador4 />
+                <Contador5 />
+                <Contador6 />
+                
+            </div>
         </div>
     );
 }
 
 export default HomePage;
+
